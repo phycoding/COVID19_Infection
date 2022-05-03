@@ -1,1 +1,1 @@
-# COVID19_Infection
+# COVID19_Infection Classification
