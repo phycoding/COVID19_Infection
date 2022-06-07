@@ -1,6 +1,5 @@
 from PIL import Image, ImageOps
 import streamlit as st
-import keras
 import tensorflow as tf
 from keras import backend as K
 import numpy as np
