@@ -139,8 +139,10 @@ outputs = Conv2D(1, (1, 1), activation='sigmoid') (c9)
 
 model = tf.keras.Model(inputs=[inputs], outputs=[outputs])
 model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate = 0.0005), loss=bce_dice_loss, metrics=[dice_coeff])
-model.summary()
-model.load_weights("unet_covid_fold1.hdf5")
+weights_path = tf.keras.utils.get_file(
+            'unet_resnet_weights.hdf5',
+            'https://github.com/phycoding/COVID19_Infection/releases/download/model/unet_covid_fold1.hdf5')
+model.load_weights(weights_path)
 
 st.title("Covid19 Lungs Infection Segmentator")
 placeholder = st.empty()
