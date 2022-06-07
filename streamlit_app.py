@@ -164,7 +164,7 @@ def center_crop(img, new_width=None, new_height=None):
 
     return center_cropped_img
 
-placeholder.image(load_image('lungs.jpg'), use_column_width=True)
+placeholder.image(load_image('Lungs.jpg'), use_column_width=True)
         
 
 menu = ["Image Upload","Camera"]
