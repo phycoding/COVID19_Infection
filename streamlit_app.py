@@ -180,7 +180,7 @@ if choice == "Image Upload":
             img_cropped = center_crop(img, new_width=224, new_height=224)
             img_cropped_gray = ImageOps.grayscale(img_cropped)
             img_cropped_gray = np.array(img_cropped_gray).reshape(1,224,224,1)
-            infection = model.predict(img_cropped_gray)
+            infection = model.predict(img_cropped_gray/255)
             fig = plt.figure(figsize=(10,10))
             st.image(img_cropped)
             plt.imshow(img_cropped_gray.reshape(224,224),cmap = "bone")
